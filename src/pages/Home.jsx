@@ -10,7 +10,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1>fjgfkgkffkfkfk</h1>
+   
       <Hero></Hero>
       
     </div>
