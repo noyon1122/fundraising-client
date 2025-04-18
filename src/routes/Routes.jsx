@@ -7,6 +7,11 @@ import WhoWeAre from "../pages/WhoWeAre";
 import WhatWeDo from "../pages/WhatWeDo";
 import OurPartners from "../pages/OurPartners";
 import ContactUs from "../pages/ContactUs";
+import CampaignList from "../pages/CampaignList";
+import CampaignDetails from "../pages/CampaignDetails";
+import CreateCampaign from "../pages/CreateCampaign";
+import Admin from "../pages/Admin";
+
 
 const router =createBrowserRouter([
     {
@@ -40,7 +45,24 @@ const router =createBrowserRouter([
             {
                 path:'/contact',
                 element:<ContactUs></ContactUs>
+            },
+            {
+                path:'/campaigns',
+                element:<CampaignList></CampaignList>
+            },
+            {
+                path:'/campaign/:id',
+                element:<CampaignDetails></CampaignDetails>
+            },
+            {
+                path:'/create-campaign',
+                element:<CreateCampaign></CreateCampaign>
+            },
+            {
+                path:'/admin',
+                element:<Admin></Admin>
             }
+
         ]
     }
 ])

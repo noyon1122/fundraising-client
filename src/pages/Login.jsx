@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; // <-- ✅ import useNavigate
 import api from '../services/api';
-import '../CSS/Login.css'; // External CSS for login
+import '../CSS/Login.css';
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
     email: '',
     password: ''
   });
+
+  const navigate = useNavigate(); // <-- ✅ initialize useNavigate
 
   const handleChange = e => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
@@ -17,9 +19,21 @@ const Login = () => {
     e.preventDefault();
     try {
       const res = await api.post('/users/login', credentials);
-      alert(`Welcome, ${res.data.name}!`);
-    } catch (err) {
-      console.error('Login error:', err);
+      const user = res.data;
+
+      // Save user to localStorage
+      localStorage.setItem('user', JSON.stringify(user));
+
+      alert(`Welcome, ${user.name}!`);
+
+      // Redirect based on role
+      if (user.role === "ADMIN") {
+        navigate('/admin');
+      } else {
+        navigate('/');
+      }
+
+    } catch (error) {
       alert('Login failed!');
     }
   };

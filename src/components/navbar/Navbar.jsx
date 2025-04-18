@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../../CSS/Navbar.css' // Import the CSS file
 
 const Navbar = () => {
+  const user = JSON.parse(localStorage.getItem('user'));
   return (
     <nav>
       <div>
@@ -15,7 +16,10 @@ const Navbar = () => {
         <Link to="/partners">Our Partners</Link>
         <Link to="/contact">Contact Us</Link>
         <Link to="/donate">Donate</Link>
-        <Link to="/login">Register/Login</Link>
+        <Link to="/campaigns">Campaigns</Link>
+        {user?.role === "ADMIN" && <a href="/admin">Admin</a>}
+        {!user && <Link to="/login">Login</Link>}
+        
       </div>
     </nav>
   );
