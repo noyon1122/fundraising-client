@@ -1,0 +1,183 @@
+.what-we-do {
+    padding: 0;
+    margin: 0;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  /* Intro */
+  .intro {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .intro h1 {
+    font-size: 3rem;
+    color: #333;
+  }
+  
+  .intro p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 1rem;
+  }
+  
+  /* Work Sections */
+  .work-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+  
+  .work-section.reverse {
+    flex-direction: column-reverse;
+  }
+  
+  .work-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .work-content {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .work-content h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .work-content p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+  }
+  
+  /* Where We Work */
+  .where-we-work {
+    background-color: #fff;
+    padding: 4rem 2rem;
+    margin: 4rem 0;
+    text-align: center;
+  }
+  
+  .where-we-work h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .where-we-work p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  .work-locations {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .work-locations li {
+    background-color: #eee;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+  }
+  
+  /* Impact Stats */
+  .impact-stats {
+    background-color: #e0f7fa;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .impact-stats h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+  }
+  
+  .stat-item h3 {
+    font-size: 2rem;
+    color: #00796b;
+  }
+  
+  .stat-item p {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  /* Get Involved Section */
+  .get-involved {
+    background-color: #ffebee;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .get-involved h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .get-involved p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: #d32f2f;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #b71c1c;
+  }
+  
+  /* Desktop View */
+  @media (min-width: 768px) {
+    .work-section {
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+    }
+  
+    .work-section.reverse {
+      flex-direction: row-reverse;
+    }
+  
+    .work-image, .work-content {
+      flex: 1;
+    }
+  
+    .work-content {
+      text-align: left;
+      margin-top: 0;
+    }
+  }
+  

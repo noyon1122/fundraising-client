@@ -1,0 +1,84 @@
+.who-we-are {
+  padding: 0;
+  margin: 0;
+  background-color: #f8f9fa;
+}
+
+.top-image {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.top-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+/* Inner Content */
+.container {
+  width: 100%;
+}
+
+/* Intro Section */
+.intro, .mission, .core-values, .impact-text, .meet-team {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.intro h1, 
+.mission h2, 
+.core-values h2, 
+.impact-text h2, 
+.meet-team h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.intro p, 
+.mission p, 
+.impact-text p, 
+.meet-team p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Core Values */
+.values-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.value-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.value-item h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.value-item p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .values-list {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
