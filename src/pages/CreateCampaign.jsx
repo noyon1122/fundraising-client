@@ -20,7 +20,8 @@ const CreateCampaign = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await api.post('/campaigns', campaignData);
+      console.log(campaignData)
+       await api.post('/campaigns', campaignData);
       alert('Campaign created successfully!');
       navigate('/campaigns');
     } catch (error) {
