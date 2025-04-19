@@ -11,6 +11,8 @@ import CampaignList from "../pages/CampaignList";
 import CampaignDetails from "../pages/CampaignDetails";
 import CreateCampaign from "../pages/CreateCampaign";
 import Admin from "../pages/Admin";
+import PaymentSuccess from "../pages/PaymentSuccess";
+import PaymentFail from "../pages/PaymentFail";
 
 
 const router =createBrowserRouter([
@@ -61,6 +63,14 @@ const router =createBrowserRouter([
             {
                 path:'/admin',
                 element:<Admin></Admin>
+            },
+            {
+                path:'/payment/success',
+                element:<PaymentSuccess></PaymentSuccess>
+            },
+            {
+                path:'/payment/fail',
+                element:<PaymentFail></PaymentFail>
             }
 
         ]
